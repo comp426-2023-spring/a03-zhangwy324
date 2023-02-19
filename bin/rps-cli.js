@@ -16,7 +16,7 @@ if(args.h || args.help){
                       e.g. {"player":"rock"}
       node-rps rock   Return JSON with results for RPS played against a simulated opponent.
                       e.g {"player":"rock","opponent":"scissors","result":"win"}`);
-    process.exit(0);
+    //process.exit(0);
 }
 
 if(args.r || args.rules){
@@ -25,7 +25,7 @@ if(args.r || args.rules){
     - Scissors CUTS Paper
     - Paper COVERS Rock
     - Rock CRUSHES Scissors`);
-    process.exit(0);
+    //process.exit(0);
 }
 
 if(args._.length > 1){
@@ -46,12 +46,12 @@ if(args._.length > 1){
     - Scissors CUTS Paper
     - Paper COVERS Rock
     - Rock CRUSHES Scissors`);
-    process.exit(0);
+    //process.exit(0);
 }
 
 if(args._.length === 0){
     console.log(JSON.stringify(rps()));
-    process.exit(0);
+    //process.exit(0);
 }
 
 if(args._.length === 1){
@@ -60,10 +60,25 @@ if(args._.length === 1){
     const rpsArr = ['rock', 'paper', 'scissors'];
     if(rpsArr.includes(playerChoice)){
         console.log(JSON.stringify(rps(playerChoice)));
-        process.exit(0);
+       //process.exit(0);
     } else {
         console.log('Invalid argument');
-        console.log(`Available options: rock, paper, scissors`);
-        process.exit(0);
+        console.log(`Usage: node-rps [SHOT]
+    Play Rock Paper Scissors (RPS)
+    
+      -h, --help      display this help message and exit
+      -r, --rules     display the rules and exit
+    
+    Examples:
+      node-rps        Return JSON with single player RPS result.
+                      e.g. {"player":"rock"}
+      node-rps rock   Return JSON with results for RPS played against a simulated opponent.
+                      e.g {"player":"rock","opponent":"scissors","result":"win"}`);
+    console.log(`Rules for Rock Paper Scissors:
+
+    - Scissors CUTS Paper
+    - Paper COVERS Rock
+    - Rock CRUSHES Scissors`);
+    //process.exit(0);
     }
 }
