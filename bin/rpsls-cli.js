@@ -69,7 +69,6 @@ if(args._.length === 0){
 }
 
 if(args._.length === 1){
-
     const playerChoice = args._[0].toString().toLowerCase();
     const rpslsArr = [ 'rock','paper','scissors','lizard','spock'];
     if(rpslsArr.includes(playerChoice)){
