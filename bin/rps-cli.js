@@ -3,7 +3,6 @@ import minimist from "minimist";
 import { rps } from "../lib/rpsls.js";
 
 const args = minimist(process.argv.slice(2));
-console.log(args);
 
 if (args.h || args.help) {
   console.log(`Usage: node-rps [SHOT]
